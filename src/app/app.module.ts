@@ -4,10 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { LeftElementComponent } from './left-element/left-element.component';
+import { TemperaturComponent } from './temperatur/temperatur.component';
+import { TeddyBearComponent } from './teddy-bear/teddy-bear.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LeftElementComponent,
+    TemperaturComponent,
+    TeddyBearComponent
   ],
   imports: [
     BrowserModule,

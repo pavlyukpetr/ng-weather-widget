@@ -1,0 +1,68 @@
+<div class="element-left">
+  <div class="element-bg-img">
+    <img [src]="places[0].img1" class="img-responsive" alt="">
+  </div>
+  <div class="element-left-bottom">
+    <div class="ele-strip">
+      <ul>
+        <li><a href="#">Hotel</a></li>
+        <li><a href="">Fishing</a></li>
+        <li><a href="">Tours</a></li>
+        <li class="anc-bor"><a href="">Weather</a></li>
+      </ul>
+    </div>
+    <div class="village">
+      <h3>{{title}}</h3>
+      <span class="line"></span>
+      <div class="activity_box">
+        <div class="scrollbar" id="style-2">
+          <div class="activity-row" (click)="changeImg($event)">
+            <div class="activity-desc">
+              <h5>Resort Address</h5>
+              <p>Sed perspiciatis</p>
+              <p>Et harum quidem</p>
+              <h6>Tel:{{places[0].phone}}</h6>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li><img [src]="places[0].img2" alt=""></li>
+                <li><img [src]="places[0].img1" alt=""></li>
+              </ul>
+            </div>
+            <div class="clear"> </div>
+          </div>
+          <div class="activity-row">
+            <div class="activity-desc">
+              <h5>Resort Address</h5>
+              <p>Sed ut perspiciatis</p>
+              <p>Et harum quidem</p>
+              <h6>Tel:{{places[1].phone}}</h6>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li><img [src]="places[1].img2" alt=""></li>
+                <li><img [src]="places[1].img1" alt=""></li>
+              </ul>
+            </div>
+            <div class="clear"> </div>
+          </div>
+          <div class="activity-row">
+            <div class="activity-desc">
+              <h5>Resort Address</h5>
+              <p>Sed ut perspiciatis</p>
+              <p>Et harum quidem</p>
+              <h6>Tel:{{places[2].phone}}</h6>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li><img [src]="places[2].img2" alt=""></li>
+                <li><img [src]="places[2].img1" alt=""></li>
+              </ul>
+            </div>
+            <div class="clear"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
