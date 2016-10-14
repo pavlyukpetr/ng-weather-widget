@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TeddyBearComponent implements OnInit {
 
   @Input()
-  public place;
+  public places;
 
   public title = 'Social statistic';
   constructor() { }

@@ -2,10 +2,10 @@
   {{title}}
 </h1>
 <div class="element">
-  <app-left-element></app-left-element>
+  <app-left-element [places]="places"></app-left-element>
   <div class="element-right">
-    <app-temperatur></app-temperatur>
-    <app-teddy-bear class="teddy-bear"></app-teddy-bear>
+    <app-temperatur [places]="places"></app-temperatur>
+    <app-teddy-bear class="teddy-bear" [places]="places"></app-teddy-bear>
   </div>
   <div class="clear"></div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-temperatur',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./temperatur.component.css']
 })
 export class TemperaturComponent implements OnInit {
+  @Input()
+  public places;
+  
   public title = 'Temperature';
 
   constructor() { }
