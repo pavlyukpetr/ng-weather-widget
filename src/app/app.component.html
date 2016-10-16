@@ -2,10 +2,12 @@
   {{title}}
 </h1>
 <div class="element">
-  <app-left-element [places]="places"></app-left-element>
+
+  <app-left-element [places]="places" (currentEmitter)="onSelect($event)"></app-left-element>
+
   <div class="element-right">
-    <app-temperatur [places]="places"></app-temperatur>
-    <app-teddy-bear class="teddy-bear" [places]="places"></app-teddy-bear>
+    <app-temperatur [places]="selectedPlace"></app-temperatur>
+    <app-teddy-bear class="teddy-bear" [places]="selectedPlace"></app-teddy-bear>
   </div>
   <div class="clear"></div>
 </div>

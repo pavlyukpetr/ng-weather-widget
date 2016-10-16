@@ -1,6 +1,6 @@
 <div class="element-left">
   <div class="element-bg-img">
-    <img [src]="places[0].img1" class="img-responsive" alt="">
+    <img [src]="selectedPlace.img1" class="img-responsive" alt="">
   </div>
   <div class="element-left-bottom">
     <div class="ele-strip">
@@ -16,7 +16,7 @@
       <span class="line"></span>
       <div class="activity_box">
         <div class="scrollbar" id="style-2">
-          <div class="activity-row" (click)="changeImg($event)">
+          <div class="activity-row" (click)="changePlace(places[0])">
             <div class="activity-desc">
               <h5>Resort Address</h5>
               <p>Sed perspiciatis</p>
@@ -31,7 +31,7 @@
             </div>
             <div class="clear"> </div>
           </div>
-          <div class="activity-row">
+          <div class="activity-row" (click)="changePlace(places[1])">
             <div class="activity-desc">
               <h5>Resort Address</h5>
               <p>Sed ut perspiciatis</p>
@@ -46,7 +46,7 @@
             </div>
             <div class="clear"> </div>
           </div>
-          <div class="activity-row">
+          <div class="activity-row" (click)="changePlace(places[2])">
             <div class="activity-desc">
               <h5>Resort Address</h5>
               <p>Sed ut perspiciatis</p>

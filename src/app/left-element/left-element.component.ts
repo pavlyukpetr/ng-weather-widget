@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
+
+import {Place} from '../shared';
 
 @Component({
   selector: 'app-left-element',
@@ -7,18 +9,25 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class LeftElementComponent implements OnInit {
-  @Input()
+  @Input()//пришло из app
   public places;
 
-  public title = 'Righteous indignation & like';
+  @Output() // ушло в app
+  public currentEmitter: EventEmitter<any> = new EventEmitter();
 
-  public changeImg(ev){
-    console.log(ev);
+  public title = 'Righteous indignation & like';
+  public selectedPlace;
+
+  public changePlace(item){
+    console.log('changePlace');
+    this.selectedPlace = item;
+    this.currentEmitter.emit(item)
   }
 
   constructor() { }
 
   ngOnInit() {
+    this.changePlace(this.places[0]);
   }
 
 }
