@@ -192,6 +192,9 @@ ul li.anc-bor {
 .activity-row, .activity-row1{
   text-align: left;
 }
+.activity-row.selected {
+    background: rgba(250, 0, 0, 0.1);
+}
 i.text-info{
   float: left;
   line-height: 60px;

@@ -16,51 +16,26 @@
       <span class="line"></span>
       <div class="activity_box">
         <div class="scrollbar" id="style-2">
-          <div class="activity-row" (click)="changePlace(places[0])">
+
+          <div class="activity-row" 
+            *ngFor="let item of places" 
+            (click)="changePlace(item)"
+            [class.selected]="item === selectedPlace"
+            >
             <div class="activity-desc">
               <h5>Resort Address</h5>
-              <p>Sed perspiciatis</p>
               <p>Et harum quidem</p>
-              <h6>Tel:{{places[0].phone}}</h6>
+              <h6>Tel:{{item.phone}}</h6>
             </div>
             <div class="activity-img">
               <ul>
-                <li><img [src]="places[0].img2" alt=""></li>
-                <li><img [src]="places[0].img1" alt=""></li>
+                <li><img [src]="item.img2" alt=""></li>
+                <li><img [src]="item.img1" alt=""></li>
               </ul>
             </div>
             <div class="clear"> </div>
           </div>
-          <div class="activity-row" (click)="changePlace(places[1])">
-            <div class="activity-desc">
-              <h5>Resort Address</h5>
-              <p>Sed ut perspiciatis</p>
-              <p>Et harum quidem</p>
-              <h6>Tel:{{places[1].phone}}</h6>
-            </div>
-            <div class="activity-img">
-              <ul>
-                <li><img [src]="places[1].img2" alt=""></li>
-                <li><img [src]="places[1].img1" alt=""></li>
-              </ul>
-            </div>
-            <div class="clear"> </div>
-          </div>
-          <div class="activity-row" (click)="changePlace(places[2])">
-            <div class="activity-desc">
-              <h5>Resort Address</h5>
-              <p>Sed ut perspiciatis</p>
-              <p>Et harum quidem</p>
-              <h6>Tel:{{places[2].phone}}</h6>
-            </div>
-            <div class="activity-img">
-              <ul>
-                <li><img [src]="places[2].img2" alt=""></li>
-                <li><img [src]="places[2].img1" alt=""></li>
-              </ul>
-            </div>
-            <div class="clear"> </div>
-          </div>
+
         </div>
       </div>
     </div>
