@@ -18,6 +18,8 @@ export class LeftElementComponent implements OnInit {
   public title = 'Righteous indignation & like';
   public selectedPlace;
 
+  public type = 'hotel';
+
   public changePlace(item){
     console.log('changePlace');
     this.selectedPlace = item;

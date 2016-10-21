@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LeftElementComponent } from './left-element/left-element.component';
 import { TemperaturComponent } from './temperatur/temperatur.component';
 import { TeddyBearComponent } from './teddy-bear/teddy-bear.component';
+import { MyPipePipe } from './shared/my-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeftElementComponent,
     TemperaturComponent,
-    TeddyBearComponent
+    TeddyBearComponent,
+    MyPipePipe
   ],
   imports: [
     BrowserModule,

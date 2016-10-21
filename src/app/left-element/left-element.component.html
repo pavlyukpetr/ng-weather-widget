@@ -5,10 +5,10 @@
   <div class="element-left-bottom">
     <div class="ele-strip">
       <ul>
-        <li><a href="#">Hotel</a></li>
-        <li><a href="">Fishing</a></li>
-        <li><a href="">Tours</a></li>
-        <li class="anc-bor"><a href="">Weather</a></li>
+        <li><a (click)="type='hotel'">Hotel</a></li>
+        <li><a (click)="type='fishing'">Fishing</a></li>
+        <li><a (click)="type='tours'">Tours</a></li>
+        <!--<li class="anc-bor"><a href="">Weather</a></li>-->
       </ul>
     </div>
     <div class="village">
@@ -18,12 +18,12 @@
         <div class="scrollbar" id="style-2">
 
           <div class="activity-row" 
-            *ngFor="let item of places" 
+            *ngFor="let item of places | myPipe: type" 
             (click)="changePlace(item)"
             [class.selected]="item === selectedPlace"
             >
             <div class="activity-desc">
-              <h5>Resort Address</h5>
+              <h5>{{item.name}}</h5>
               <p>Et harum quidem</p>
               <h6>Tel:{{item.phone}}</h6>
             </div>
